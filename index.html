@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe Meu App AR DRAW</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .download-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ola Mundo</h1>
+        <h1>Visite Meu App Agora</h1>
+        <h1>Baixe Meu App</h1>
+        <p>Clique no botão abaixo para baixar o aplicativo.</p>
+        <button class="download-button" id="downloadButton">Baixar App</button>
+        <p>Antes de você baixar o app, por favor, concorde com a <a href="privacy.html">Política de Privacidade</a> e os <a href="terms.html">Termos e Condições</a>.</p>
+    </div>
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "assets/app.apk"; // Substitua pelo caminho correto do seu arquivo APK
+            link.download = "app.apk";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
